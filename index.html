@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Hospital Management System</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="header"><h1>LifeCare Hospital Portal</h1></div>
+    <div class="container">
+        <form id="pForm">
+            <input type="text" id="name" placeholder="Patient Name" required>
+            <input type="number" id="age" placeholder="Age" required>
+            <select id="gender"><option value="Male">Male</option><option value="Female">Female</option></select>
+            <button type="submit">Add to Database</button>
+        </form>
+        <table border="1">
+            <thead><tr><th>ID</th><th>Name</th><th>Age</th><th>Gender</th></tr></thead>
+            <tbody id="pData"></tbody>
+        </table>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
