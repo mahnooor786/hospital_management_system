@@ -1,69 +1,125 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>LifeCare Pro | Hospital Management</title>
-    <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Smart Hospital System</title>
+
+  <link rel="stylesheet" href="style.css">
+
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <div class="app-wrapper">
-        <aside class="sidebar">
-            <div class="logo">LifeCare<span>+</span></div>
-            <nav>
-                <div class="nav-item active">Dashboard</div>
-                <div class="nav-item">Patients</div>
-                <div class="nav-item">Doctors</div>
-                <div class="nav-item">Inventory</div>
-                <div class="nav-item">Settings</div>
-            </nav>
-        </aside>
 
-        <main class="main-content">
-            <header>
-                <h1>Hospital Overview</h1>
-                <div class="user-profile">Dr. Mahnoor <div class="avatar">M</div></div>
-            </header>
+  <!-- NAVBAR -->
+  <div class="navbar">
+    <h1>Smart Hospital</h1>
 
-            <div class="stats-row">
-                <div class="stat-card"><h3>12</h3><p>Today's Patients</p></div>
-                <div class="stat-card"><h3>45</h3><p>Available Beds</p></div>
-                <div class="stat-card"><h3>08</h3><p>OPD Queue</p></div>
-            </div>
-
-            <div class="content-grid">
-                <section class="card registration">
-                    <h3>New Admission</h3>
-                    <form id="pForm">
-                        <input type="text" id="name" placeholder="Patient Full Name" required>
-                        <div class="row">
-                            <input type="number" id="age" placeholder="Age" required>
-                            <select id="gender">
-                                <option value="Male">Male</option>
-                                <option value="Female">Female</option>
-                            </select>
-                        </div>
-                        <button type="submit">Complete Registration</button>
-                    </form>
-                </section>
-
-                <section class="card database">
-                    <h3>Live Patient Database</h3>
-                    <table>
-                        <thead>
-                            <tr>
-                                <th>ID</th>
-                                <th>Patient Name</th>
-                                <th>Status</th>
-                                <th>Action</th>
-                            </tr>
-                        </thead>
-                        <tbody id="pData"></tbody>
-                    </table>
-                </section>
-            </div>
-        </main>
+    <div class="nav-links">
+      <a href="#">Home</a>
+      <a href="#">Doctors</a>
+      <a href="#">Appointments</a>
+      <a href="#">Login</a>
     </div>
-    <script src="script.js"></script>
+  </div>
+
+  <!-- HERO SECTION -->
+  <div class="hero">
+    <div>
+      <h2>Smart Hospital Management System</h2>
+
+      <p>Book Appointments | Manage Health | Digital Care</p>
+
+      <br>
+
+      <button class="btn" onclick="showMessage()">
+        Book Appointment
+      </button>
+    </div>
+  </div>
+
+  <!-- SERVICES -->
+  <div class="section">
+    <h2>Our Services</h2>
+
+    <div class="grid">
+
+      <div class="card">
+        <h3>Appointment Booking</h3>
+        <p>Book appointments online easily.</p>
+      </div>
+
+      <div class="card">
+        <h3>Qualified Doctors</h3>
+        <p>Experienced doctors available 24/7.</p>
+      </div>
+
+      <div class="card">
+        <h3>Digital Prescriptions</h3>
+        <p>Secure and paperless prescriptions.</p>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- DOCTORS -->
+  <div class="section">
+    <h2>Doctors</h2>
+
+    <div class="grid">
+
+      <div class="card">
+        <h3>Dr. Ali</h3>
+        <p>Cardiologist</p>
+      </div>
+
+      <div class="card">
+        <h3>Dr. Sara</h3>
+        <p>Dentist</p>
+      </div>
+
+      <div class="card">
+        <h3>Dr. Ahmed</h3>
+        <p>General Physician</p>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- APPOINTMENT FORM -->
+  <div class="section">
+    <h2>Book Appointment</h2>
+
+    <div class="form-card">
+
+      <form id="appointmentForm">
+
+        <input type="text" id="name" placeholder="Your Name" required>
+
+        <input type="date" required>
+
+        <select required>
+          <option value="">Select Doctor</option>
+          <option>Dr. Ali</option>
+          <option>Dr. Sara</option>
+          <option>Dr. Ahmed</option>
+        </select>
+
+        <button class="btn" type="submit">
+          Submit
+        </button>
+
+      </form>
+
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <div class="footer">
+    <p>© 2026 Smart Hospital System</p>
+  </div>
+
+  <script src="script.js"></script>
+
 </body>
 </html>
